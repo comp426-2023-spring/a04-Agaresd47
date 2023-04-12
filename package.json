@@ -1,0 +1,19 @@
+{
+  "name": "a04-agaresd47",
+  "version": "1.0.0",
+  "description": "This assignment will help you stand up a web API using Express and the module that you produced for a03.",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "author": "Agaresd47",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minimist": "^1.2.8"
+  }
+}
