@@ -4,8 +4,8 @@ import express from 'express'
 
 var argv = minimist(process.argv.slice(2));
 const port = argv.port || 5000;
-const app = express();
 
+const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -18,7 +18,7 @@ app.get('/app/rps/', (req, res) => {
     res.status(200).send(JSON.stringify(rps()));
 })
 
-app.get('/app/rps/', (req, res) => {     
+app.get('/app/rpsls/', (req, res) => {     
     res.status(200).send(JSON.stringify(rpsls()));
 })
 
@@ -31,11 +31,11 @@ app.get('/app/rpsls/play', (req, res) => {
 })
 
 app.post('/app/rps/play', (req, res) => {
-    res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
+    res.status(200).send(JSON.stringify(rps(req.body.shot)));
 })
 
 app.post('/app/rpsls/play', (req, res) => {
-    res.status(200).send(JSON.stringify(rpsls(req.body.shot))).end();
+    res.status(200).send(JSON.stringify(rpsls(req.body.shot)));
 })
 
 app.get('/app/rps/play/:shot/', (req, res) => {    
